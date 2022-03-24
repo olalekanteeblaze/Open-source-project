@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <!-- meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" / -->
+        <!-- Other devices -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, height=device-height, maximum-scale=1, minimum-scale=1" />
+        <!-- end meta -->
+        <script src="./js/jquery-2.1.4.min.js"></script>
+        <script src="./js/jquery-ui.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/fastclick.min.js"></script>
+        <script src="./js/planning-poker.js"></script>
+        <script src="./js/page-transitions.js"></script>
+        <script src="./js/external-resources.js"></script>
+        <link href="./css/yeti/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/font-awesome.min.css" rel="stylesheet">
+        <link href="./css/index.css" rel="stylesheet">
+        <title>Planning Poker</title>
+    </head>
+    <body>
+        <div id="app">
+            <nav id="main-nav" class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Poker Planning</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active noclick">
+                                <a id="link1" href="#" data-page="#page1">
+                                    Standard <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li><a id="link2" href="#" data-page="#page2">T-Shirt</a></li>
+                            <li><a id="link3" href="#" data-page="#page3">Fibonacci</a></li>
+                            <li><a id="link4" href="#" data-page="#pageInfo">Info</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="page1" class="page ">
+                <div class="container-fluid">
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    0
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    0.5
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    1
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    3
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    5
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    8
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    13
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    20
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    40
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    100
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    ∞
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    <span><i class="fa fa-question"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    <span><i class="fa fa-coffee"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="page2" class="page nodisplay">
+                <div class="container-fluid">
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    0
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    XS
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    S
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    M
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    L
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    XL
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    2XL
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    3XL
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    4XL
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    5XL
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    6XL
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    ∞
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    <span><i class="fa fa-question"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    <span><i class="fa fa-coffee"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="page3" class="page nodisplay">
+                <div class="container-fluid">
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    0
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    1
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    3
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    5
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    8
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    13
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    21
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    34
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    55
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    89
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    144
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    ∞
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    <span><i class="fa fa-question"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    <span><i class="fa fa-coffee"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pageInfo" class="page page-info nodisplay">
+                <p class="info-title">Informazioni</p>
+                <p>Il planning poker è il metodo più utilizzato per la stima agile di requisiti.</p>
+                <p>Ogni carta rappresenta gli story point o la taglia T-Shirt necessaria per l'implementazione del requisito.</p>
+                <p>Si gioca a planning poker in gruppo; si raggiunge la stima di ciascuna attività sfruttando il principio della “saggezza della folla” e all’unanimità (consensus).</p>
+                <p class="info-title">Calcolo effort</p>
+                <p>Il planning poker è un metodo che si basa sulla dimensione relativa di un requisito.</p>
+                <p>I valori numerici delle carte (story point) e le taglie delle t-shirt sono un’unità di tempo e sono il risultato della funzione che ha come variabili: complessità, rischio e incertezza.</p>
+                <p class="info-title">Risorse</p>
+                <ul>
+                    <li><a href="#" data-page="http://www.agileway.it/planning-poker-la-stima-agile-di-requisiti/" class="external-resource" title="planning poker">Planning poker, la stima agile di requisiti</a></li>
+                    <li><a href="#" data-page="http://www.agileway.it/user-story-e-acceptance-criteria/" class="external-resource" title="user story e acceptance criteria">User story e acceptance criteria</a></li>
+                </ul>
+                <p class="info-title">Supporto</p>
+                <p>Per supporto o feedback relativi all'applicazione: <br/> <a href="mailto:supporto-app@agileway.it?subject=Planning Poker App">supporto-app@agileway.it</a></p>
+                <p>In caso di problemi fornisci quante più indicazioni possibili e gli step per riprodurli.</p>
+                <p class="info-title">Altro...</p>
+                <p>Se trovi l'applicazione utile, ti prego di lasciare il tuo commento e le tue stelline di gradimento.</p>
+                <p>Puoi anche pagarmi un caffè donando una piccola somma su Paypal.</p>
+                <div class="paypal-donation text-center">
+                    <a href="#" data-page="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=donazioni%40agileway%2eit&lc=IT&item_name=Agileway%2eit&item_number=poker%20planning&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" class="external-resource">
+                        <input type="image" src="https://www.paypalobjects.com/it_IT/IT/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal è il metodo rapido e sicuro per pagare e farsi pagare online.">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="container-fluid pull-right"><p><a href="#" data-page="http://www.agileway.it/" class="external-resource" title="agile way">agileway.it</a></p></div>
+        </div>
+
+        <div id="overlay">
+            <div class="table">
+                <div class="table-cell">
+                    <img src="img/tap-icon-white.png" class="img-responsive center-block">
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="square-big">
+                <div class="content">
+                    <div class="table">
+                        <div class="table-cell">
+                            <span id="selected_card"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
+        <script type="text/javascript"> 
+            app.initialize(); 
+        </script>
+    </body>
+</html>
